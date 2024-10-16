@@ -1,7 +1,7 @@
 ---
 title: "Alcohol vs Seat choice"
-author: "Your Name"
-date: "Fall 2020"
+author: "Andrew Arredondo"
+date: "10/10/24"
 output: html_document
 ---
 
@@ -35,10 +35,21 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
+The graph is showing me that back has the highest amount of alcohol consumed and at the front seat has the lowest and at the middle is right below 40 while back is the highest which surpasses 40.
+
 ## Numerical Summarys 
-
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+The numerical summary shows that front has the lowest mean and the back has the highest mean which is 9.6
 ## Inferential Tests
+```{r}
+aov(alcohol~Seat,data=davisdata)
+```
 
+
+The inferential test shows that residual standard error is 7.878 
 ## Conclusions
 
-
+we conclude that There is a difference in the alcohol you consume based off the row you are in The median for back is four and the Middle is one. The means have a huge difference. The residual standard error is 7.878 , The Mean for back is 9.6 ,mean for  front is 1.8
+and the mean for middle is 3.2
