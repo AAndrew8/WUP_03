@@ -47,9 +47,14 @@ The numerical summary shows that front has the lowest mean and the back has the 
 aov(alcohol~Seat,data=davisdata)
 ```
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
 
-The inferential test shows that residual standard error is 7.878 
+
+The inferential test shows that residual standard error is 7.878 , as well is that the value for seat is 9.65 and there is a big difference in between the means for seat and residuals.
 ## Conclusions
 
 we conclude that There is a difference in the alcohol you consume based off the row you are in The median for back is four and the Middle is one. The means have a huge difference. The residual standard error is 7.878 , The Mean for back is 9.6 ,mean for  front is 1.8
-and the mean for middle is 3.2
+and the mean for middle is 3.2. 
